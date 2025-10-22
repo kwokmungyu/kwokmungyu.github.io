@@ -1,0 +1,79 @@
+---
+title: "Mungyu Kwok"
+---
+
+<style>
+  .section-header {
+    border-bottom: 2px solid #007bff; /* A nice blue color */
+    padding-bottom: 5px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+</style>
+
+*Tel: +1 (646)818-0370*  | *Email: mk5149@cumc.columbia.edu*  | *Add.: 60 Haven Avenue, New York* 
+
+---
+
+<h2 class="section-header">Education</h2>
+
+#### Columbia University Mailman School of Public Health 
+*09/2025 - 06/2027* 
+
+* **Degree:** Master's Degree in Biostatistics (Public Health Data Science Track) 
+* **Core Courses:** Data Science, Probability, Principles of Epidemiology, Biostatistical Methods 
+
+#### The Chinese University of Hong Kong (CUHK) 
+*09/2021 - 06/2025* 
+
+* **Degree:** Bachelor's Degree in Biomedical Engineering 
+* **GPA:** Cumulative $GPA=3.381/4.00$ | Major $GPA=3.513/4.00$ (First Honor Graduate) 
+* **Core Courses:** Human Anatomy and Physiology, Biomechanics; Engineering Physics, Engineering Mathematics, Bionanotechnology, Statistical Technology in Life Sciences, Biomedical Engineering Circuits and Signals, Global Medical Device Regulatory Affairs, Biomedical Imaging, Bioinformatics
+* **FYP Project:** Final Year Project (Advised by Prof. Li Yu - RNAseq related Deep Learning Algorithm) 
+
+<h2 class="section-header">Awards & Honors</h2>
+
+* Yasumoto International Exchange Scholarships 2024 
+* TOP 5%, Department of Biomedical Engineering, The Faculty of Engineering CUHK 2024 
+* Dean's List 2023-2024, The Chinese University of Hong Kong (CUHK) 
+* College of Engineering Entrance Scholarship 2021-2022 
+* University Full-time Undergraduate Entrance Scholarship 2021-2022 
+* HOSA 2020 Bronze Award (Physiology) for the International Leadership Conference of Health Professionals 
+* AP Scholar with Distinction 2021 & AP Scholar with Distinction 2020 
+
+<h2 class="section-header">Professional Internship</h2>
+
+#### IQVIA Enterprise Management Consulting (Shanghai) Co., Ltd 
+*Medical Consultation Intern (04/2023 - 08/2023)* 
+
+* **Industry Research:** Assisted the project team in collecting, analyzing, and organizing medical and related information, with a focus on searching, reviewing, and summarizing relevant policy documents and industry data. 
+* **Data Analysis:** Assisted the project team in organizing primary data using ThinkCell and Excel, contributed to the writing of the final report, analyzed data characteristics, and supported the preparation of reports at various stages, including adjustments to PPT content, layout design, and revisions. 
+* **Daily Support:** Assisted the team with various tasks, including writing presentation scripts and project proposals, participating in departmental meetings with clients, and responsible for recording and translating meeting discussions. 
+* **Outcomes:**
+    * Assisted the team in completing various related tasks, including collaborating on a white paper titled "China OTC Market Development and Retail Pharmacy Development Trend and Insight," translating it into English. 
+    * Conducted research on Contract Sales Organizations (CSOs) for five major pharmaceutical companies in China. 
+    * Performed individual research on Volume-Based Procurement (VBP) across eleven provinces and autonomous regions in China. 
+
+<h2 class="section-header">Research Projects</h2>
+
+#### Prof. Yu Li's Lab, CUHK Department of Computer Science and Engineering 
+*Student Research Intern, Final Year Project (FYP-based) & AIH Intern (09/2024 - Present)* 
+
+* **Presentation on Algorithm:** Conducted an in-depth review of the original model paper and delivered a detailed 40-minute presentation. 
+* **Literature Review:** Researched, read, and organized the latest findings in the field of single-cell studies. 
+* **Code Replication:** Replicated the entire 2022 algorithm on a kidney dataset, followed by the enhancement algorithm provided by a PhD mentor. 
+* **Independent Project:** Conducted an independent project using RNA sequencing data (combining bulk and single-cell RNA sequences) to predict cell type quantity and signature matrices, with a current focus on predicting rare cell types. 
+
+#### Graduate Institute of Biomedical Electronics and Bioinformatics, National Taiwan University 
+*Summer Research Assistant | Prof. An-Chi Wei's Lab (06/2024 - 08/2024)* 
+
+* **Reading Papers & Data Collection:** Assisted in collecting mitochondria-related data for our lab's mitoTox database by screening journal articles, filtering papers, and organizing data for upload. 
+* **RNA-seq Analysis:** Conducted bulk and single-cell RNA sequencing analysis on several key datasets using various algorithms (DESeq2, Seurat, Limma-Voom, GSEA). 
+* **Conducting Experiments:** Assisted in conducting essential experiments, including the preparation of various cell types and mitochondria. 
+* **Outcomes:** Analyzed 10 RNA-seq datasets and contributed over 10,000 rows of information to the mitoTox database.
+
+<h2 class="section-header">Skills & Interests</h2>
+
+* **Languages:** English (Fluent), Mandarin (Native), Cantonese (Fluent), Korean (Elementary)
+* **Software Skills:** Microsoft Office, Thinkcell, C/Java, MATLAB, Python, Basic Arduino, R 
+* **Interests:** Photography, Jogging, Swimming, Pilates (STOTT PILATES Intermediate), Piano, Dance (15 Years) 

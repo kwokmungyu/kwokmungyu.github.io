@@ -6,7 +6,13 @@ output:
     toc_float: true
     theme: cosmo
 ---
+# Welcome to Mungyu's Website
 
-# This is Mungyu's awesome website
+Hi! My name is Mungyu Kwok. 
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+I am a first-year graduate student in the MS Biostatstics (Public Health Data Science) program at Columbia University.
+
+This website hosts my solutions for P8105 Homework 4.
+
+* The **Resume** page contains my academic and professional experience.
+* The **Dashboard** page contains my solution for P8105 Data Science I Homework 4 Problem 2.
