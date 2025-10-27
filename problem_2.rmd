@@ -1,0 +1,124 @@
+---
+title: "Problem 2: NYC Restaurant Inspections"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+# Load all required packages
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+library(stringr) # For str_c
+library(forcats) # For fct_reorder
+```
+
+```{r}
+# Load the data
+data("rest_inspec")
+
+# Process the data before analysis
+set.seed(42) # Ensure reproducible results
+
+inspections_sample <- rest_inspec %>%
+  filter(
+    !is.na(score),      # Remove rows with no score
+    !is.na(grade),      # Remove rows with no grade
+    !is.na(latitude),   # Remove rows with no coordinates
+    latitude != 0,      # Remove invalid coordinates
+    boro != "Missing"   # Remove "Missing" borough
+  ) %>%
+  # Randomly sample 5000 rows for plotting
+  sample_n(5000) %>%
+  mutate(
+    # Clean up cuisine descriptions (Title Case)
+    cuisine_description = str_to_title(cuisine_description)
+  )
+
+# Summarize the count for each grade
+grade_counts <- inspections_sample %>%
+  filter(!is.na(grade)) %>% # Ensure no NA grades
+  count(grade) %>%
+  arrange(desc(grade)) # Arrange them A, B, C...
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+```{r}
+# Plot A: Proportion of Restaurant Grades (Pie Chart)
+plot_ly(
+  data = grade_counts,
+  labels = ~grade,  # The category names
+  values = ~n,      # The counts
+  type = "pie",
+  textinfo = "label+percent", # Show label and percentage
+  insidetextorientation = "radial", # Make text readable
+  marker = list(colors = "viridis") # Use the same color theme
+) %>%
+  layout(
+    title = "Proportion of Restaurant Grades in Sample",
+    showlegend = FALSE # Legend is redundant with text labels
+  )
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+```{r}
+# Plot B: Scores by Borough (Box Plot)
+inspections_sample %>%
+  mutate(
+    # reorder the x-axis by the median score
+    boro = fct_reorder(boro, score, .fun = median, .na_rm = TRUE)
+  ) %>%
+  plot_ly(
+    x = ~boro, 
+    y = ~score,
+    color = ~boro,
+    colors = "viridis",
+    type = "box"
+  ) %>%
+  layout(
+    title = "Restaurant Scores by Borough (Lower is Better)",
+    xaxis = list(title = "Borough"),
+    yaxis = list(title = "Score")
+  )
+```
+
+### Chart C
+```{r}
+# Plot C: Top 15 Cuisines in Sample (Bar Plot)
+top_15_cuisines <- inspections_sample %>%
+  count(cuisine_description) %>%
+  top_n(15, n)
+
+# Draw the bar plot
+top_15_cuisines %>%
+  mutate(
+    # Reorder the y-axis by count (n)
+    cuisine_description = fct_reorder(cuisine_description, n)
+  ) %>%
+  plot_ly(
+    x = ~n, 
+    y = ~cuisine_description,
+    color = ~cuisine_description,  # factor
+    colors = "viridis",
+    type = "bar",
+    orientation = "h"  # 'h' means horizontal bar chart
+  ) %>%
+  layout(
+    title = "Top 15 Cuisines in Sample",
+    xaxis = list(title = "Count"),
+    yaxis = list(title = "Cuisine"),
+    showlegend = FALSE # Hide the legend (redundant)
+  )
+```
+

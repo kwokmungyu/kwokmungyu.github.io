@@ -16,6 +16,6 @@ navbar:
     - icon: fa-envelope
       text: "Email"
       href: "mk5149@cumc.columbia.edu" 
-output:
-  html_document:
-    theme: cosmo
+# output:
+#   html_document:
+#     theme: cosmo

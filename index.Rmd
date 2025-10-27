@@ -1,9 +1,9 @@
 ---
-title: "Mungyu Kwok's website"
+title: "Mungyu Kwok"
 output: 
   html_document:
-    toc: true
-    toc_float: true
+    # toc: true
+    # toc_float: true
     theme: cosmo
 ---
 # Welcome to Mungyu's Website
