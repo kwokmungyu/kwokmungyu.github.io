@@ -1,5 +1,8 @@
 ---
 title: "Mungyu Kwok"
+output: 
+  html_document:
+    theme: cosmo
 ---
 
 <style>

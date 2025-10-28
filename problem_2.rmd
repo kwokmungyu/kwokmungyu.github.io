@@ -47,7 +47,7 @@ grade_counts <- inspections_sample %>%
 ```
 
 
-Column {data-width=650}
+Column {data-width=500}
 -----------------------------------------------------------------------
 
 ### Chart A
@@ -68,7 +68,7 @@ plot_ly(
   )
 ```
 
-Column {data-width=350}
+Column {data-width=500}
 -----------------------------------------------------------------------
 
 ### Chart B
