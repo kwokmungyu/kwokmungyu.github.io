@@ -5,6 +5,10 @@ output:
     orientation: columns
     vertical_layout: fill
     theme: cosmo
+    navbar:                            
+    - title: "Return to Main Site"
+      href: "index.html"
+      align: right
 ---
 
 ```{r setup, include=FALSE}
