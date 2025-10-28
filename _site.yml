@@ -17,7 +17,7 @@ navbar:
       href: http://github.com/kwokmungyu/
     - icon: fa-envelope
       text: "Email"
-      href: "mk5149@cumc.columbia.edu" 
+      href: "mailto:mk5149@cumc.columbia.edu" 
 # output:
 #   html_document:
 #     theme: cosmo
