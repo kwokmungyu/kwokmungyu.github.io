@@ -58,13 +58,18 @@ plot_ly(
   labels = ~grade,  # The category names
   values = ~n,      # The counts
   type = "pie",
-  textinfo = "label+percent", # Show label and percentage
-  insidetextorientation = "radial", # Make text readable
-  marker = list(colors = "viridis") # Use the same color theme
+  
+  # 2. FIX: Show only percent on the pie...
+  textinfo = "percent", 
+  
+  insidetextorientation = "radial",
+  marker = list(colors = "viridis") 
 ) %>%
   layout(
     title = "Proportion of Restaurant Grades in Sample",
-    showlegend = FALSE # Legend is redundant with text labels
+    
+    # ...and show the labels in a legend. This fixes the overlap.
+    showlegend = TRUE 
   )
 ```
 

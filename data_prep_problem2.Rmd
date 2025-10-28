@@ -22,3 +22,53 @@ library(stringr) # For str_c
 library(forcats) # For fct_reorder
 ```
 
+
+### 2. Load and Process Data
+Next, we load the `rest_inspec` dataset from the `p8105.datasets` package and perform a series of cleaning and filtering steps.
+```{r}
+# Load the data
+data("rest_inspec")
+
+# Set a random seed for reproducible sampling
+set.seed(42) 
+
+inspections_sample <- rest_inspec %>%
+  filter(
+    !is.na(score),      # Remove rows with no score
+    !is.na(grade),      # Remove rows with no grade
+    !is.na(latitude),   # Remove rows with no coordinates
+    latitude != 0,      # Remove invalid coordinates (latitude=0)
+    boro != "Missing"   # Remove "Missing" borough
+  ) %>%
+  # The dataset is large, so we randomly sample 5000 rows for plotting
+  sample_n(5000) %>%
+  mutate(
+    # Change cuisine description text to Title Case for better appearance
+    cuisine_description = str_to_title(cuisine_description)
+  )
+
+# Summarize the count for each grade for Plot A (Pie Chart)
+grade_counts <- inspections_sample %>%
+  filter(!is.na(grade)) %>% 
+  count(grade) %>%
+  arrange(desc(grade)) # Sort
+```
+
+
+### 3. View the Cleaned Data
+Here is an overview of the data we will use for plotting after cleaning and sampling:
+```{r}
+head(inspections_sample)
+```
+
+And here is the grade data used for the pie chart:
+```{r}
+print(grade_counts)
+```
+
+
+
+
+
+
+
