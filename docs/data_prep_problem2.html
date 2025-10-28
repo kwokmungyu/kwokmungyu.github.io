@@ -11,7 +11,7 @@
 
 
 
-<title>Mungyu Kwok</title>
+<title>Data for Problem 2</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -281,167 +281,26 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Mungyu Kwok</h1>
+<h1 class="title toc-ignore">Data for Problem 2</h1>
 
 </div>
 
 
-<style>
-  .section-header {
-    border-bottom: 2px solid #007bff; /* A nice blue color */
-    padding-bottom: 5px;
-    margin-top: 25px;
-    margin-bottom: 15px;
-  }
-</style>
-<p><em>Tel: +1 (646)818-0370</em> | <em>Email: <a
-href="mailto:mk5149@cumc.columbia.edu"
-class="email">mk5149@cumc.columbia.edu</a></em> | <em>Add.: 60 Haven
-Avenue, New York</em></p>
-<hr />
-<h2 class="section-header">
-Education
-</h2>
-<div id="columbia-university-mailman-school-of-public-health"
-class="section level4">
-<h4>Columbia University Mailman School of Public Health</h4>
-<p><em>09/2025 - 06/2027</em></p>
-<ul>
-<li><strong>Degree:</strong> Master’s Degree in Biostatistics (Public
-Health Data Science Track)</li>
-<li><strong>Core Courses:</strong> Data Science, Probability, Principles
-of Epidemiology, Biostatistical Methods</li>
-</ul>
+<div id="data-preprocessing" class="section level2">
+<h2>Data Preprocessing</h2>
+<p>This page shows how the data used in the <code>problem_2.rmd</code>
+dashboard was loaded and cleaned.</p>
+<div id="load-required-packages" class="section level3">
+<h3>1. Load Required Packages</h3>
+<p>First, we load all R packages necessary for analysis and
+plotting.</p>
+<pre class="r"><code>library(flexdashboard)
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+library(stringr) # For str_c
+library(forcats) # For fct_reorder</code></pre>
 </div>
-<div id="the-chinese-university-of-hong-kong-cuhk"
-class="section level4">
-<h4>The Chinese University of Hong Kong (CUHK)</h4>
-<p><em>09/2021 - 06/2025</em></p>
-<ul>
-<li><strong>Degree:</strong> Bachelor’s Degree in Biomedical
-Engineering</li>
-<li><strong>GPA:</strong> Cumulative <span
-class="math inline">\(GPA=3.381/4.00\)</span> | Major <span
-class="math inline">\(GPA=3.513/4.00\)</span> (First Honor
-Graduate)</li>
-<li><strong>Core Courses:</strong> Human Anatomy and Physiology,
-Biomechanics; Engineering Physics, Engineering Mathematics,
-Bionanotechnology, Statistical Technology in Life Sciences, Biomedical
-Engineering Circuits and Signals, Global Medical Device Regulatory
-Affairs, Biomedical Imaging, Bioinformatics</li>
-<li><strong>FYP Project:</strong> Final Year Project (Advised by
-Prof. Li Yu - RNAseq related Deep Learning Algorithm)</li>
-</ul>
-<h2 class="section-header">
-Awards &amp; Honors
-</h2>
-<ul>
-<li>Yasumoto International Exchange Scholarships 2024</li>
-<li>TOP 5%, Department of Biomedical Engineering, The Faculty of
-Engineering CUHK 2024</li>
-<li>Dean’s List 2023-2024, The Chinese University of Hong Kong
-(CUHK)</li>
-<li>College of Engineering Entrance Scholarship 2021-2022</li>
-<li>University Full-time Undergraduate Entrance Scholarship
-2021-2022</li>
-<li>HOSA 2020 Bronze Award (Physiology) for the International Leadership
-Conference of Health Professionals</li>
-<li>AP Scholar with Distinction 2021 &amp; AP Scholar with Distinction
-2020</li>
-</ul>
-<h2 class="section-header">
-Professional Internship
-</h2>
-</div>
-<div id="iqvia-enterprise-management-consulting-shanghai-co.-ltd"
-class="section level4">
-<h4>IQVIA Enterprise Management Consulting (Shanghai) Co., Ltd</h4>
-<p><em>Medical Consultation Intern (04/2023 - 08/2023)</em></p>
-<ul>
-<li><strong>Industry Research:</strong> Assisted the project team in
-collecting, analyzing, and organizing medical and related information,
-with a focus on searching, reviewing, and summarizing relevant policy
-documents and industry data.</li>
-<li><strong>Data Analysis:</strong> Assisted the project team in
-organizing primary data using ThinkCell and Excel, contributed to the
-writing of the final report, analyzed data characteristics, and
-supported the preparation of reports at various stages, including
-adjustments to PPT content, layout design, and revisions.</li>
-<li><strong>Daily Support:</strong> Assisted the team with various
-tasks, including writing presentation scripts and project proposals,
-participating in departmental meetings with clients, and responsible for
-recording and translating meeting discussions.</li>
-<li><strong>Outcomes:</strong>
-<ul>
-<li>Assisted the team in completing various related tasks, including
-collaborating on a white paper titled “China OTC Market Development and
-Retail Pharmacy Development Trend and Insight,” translating it into
-English.</li>
-<li>Conducted research on Contract Sales Organizations (CSOs) for five
-major pharmaceutical companies in China.</li>
-<li>Performed individual research on Volume-Based Procurement (VBP)
-across eleven provinces and autonomous regions in China.</li>
-</ul></li>
-</ul>
-<h2 class="section-header">
-Research Projects
-</h2>
-</div>
-<div
-id="prof.-yu-lis-lab-cuhk-department-of-computer-science-and-engineering"
-class="section level4">
-<h4>Prof. Yu Li’s Lab, CUHK Department of Computer Science and
-Engineering</h4>
-<p><em>Student Research Intern, Final Year Project (FYP-based) &amp; AIH
-Intern (09/2024 - Present)</em></p>
-<ul>
-<li><strong>Presentation on Algorithm:</strong> Conducted an in-depth
-review of the original model paper and delivered a detailed 40-minute
-presentation.</li>
-<li><strong>Literature Review:</strong> Researched, read, and organized
-the latest findings in the field of single-cell studies.</li>
-<li><strong>Code Replication:</strong> Replicated the entire 2022
-algorithm on a kidney dataset, followed by the enhancement algorithm
-provided by a PhD mentor.</li>
-<li><strong>Independent Project:</strong> Conducted an independent
-project using RNA sequencing data (combining bulk and single-cell RNA
-sequences) to predict cell type quantity and signature matrices, with a
-current focus on predicting rare cell types.</li>
-</ul>
-</div>
-<div
-id="graduate-institute-of-biomedical-electronics-and-bioinformatics-national-taiwan-university"
-class="section level4">
-<h4>Graduate Institute of Biomedical Electronics and Bioinformatics,
-National Taiwan University</h4>
-<p><em>Summer Research Assistant | Prof. An-Chi Wei’s Lab (06/2024 -
-08/2024)</em></p>
-<ul>
-<li><strong>Reading Papers &amp; Data Collection:</strong> Assisted in
-collecting mitochondria-related data for our lab’s mitoTox database by
-screening journal articles, filtering papers, and organizing data for
-upload.</li>
-<li><strong>RNA-seq Analysis:</strong> Conducted bulk and single-cell
-RNA sequencing analysis on several key datasets using various algorithms
-(DESeq2, Seurat, Limma-Voom, GSEA).</li>
-<li><strong>Conducting Experiments:</strong> Assisted in conducting
-essential experiments, including the preparation of various cell types
-and mitochondria.</li>
-<li><strong>Outcomes:</strong> Analyzed 10 RNA-seq datasets and
-contributed over 10,000 rows of information to the mitoTox
-database.</li>
-</ul>
-<h2 class="section-header">
-Skills &amp; Interests
-</h2>
-<ul>
-<li><strong>Languages:</strong> English (Fluent), Mandarin (Native),
-Cantonese (Fluent), Korean (Elementary)</li>
-<li><strong>Software Skills:</strong> Microsoft Office, Thinkcell,
-C/Java, MATLAB, Python, Basic Arduino, R</li>
-<li><strong>Interests:</strong> Photography, Jogging, Swimming, Pilates
-(STOTT PILATES Intermediate), Piano, Dance (15 Years)</li>
-</ul>
 </div>
 
 

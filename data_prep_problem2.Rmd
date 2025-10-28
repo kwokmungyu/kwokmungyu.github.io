@@ -1,0 +1,24 @@
+---
+title: "Data for Problem 2"
+output: 
+  html_document:
+    theme: cosmo
+---
+
+## Data Preprocessing
+
+This page shows how the data used in the `problem_2.rmd` dashboard was loaded and cleaned.
+
+### 1. Load Required Packages
+
+First, we load all R packages necessary for analysis and plotting.
+
+```{r setup, message=FALSE, warning=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+library(stringr) # For str_c
+library(forcats) # For fct_reorder
+```
+
